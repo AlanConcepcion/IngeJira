@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         public void login1()
         {
-
+            
             try
             {
 
@@ -49,15 +49,23 @@ namespace WindowsFormsApp1
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.ToString());
+
+               MessageBox.Show("ID o contraseña incorrectos.");
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            login1();
+            if(textBox1.Text != "" && textBox1.Text != "")
+            {
+                login1();
+            }
+            else
+            {
+                MessageBox.Show("Llene los campos.");
+            }
 
         }
 
