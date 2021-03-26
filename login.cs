@@ -41,10 +41,9 @@ namespace WindowsFormsApp1
                             this.Hide();
                             menu f2 = new menu();
                             f2.Show();
-                        } else
-                        {
-                            MessageBox.Show("Ese no. c:");
+
                         }
+                    conexion.Close();
                     
                 }
             }
@@ -60,8 +59,12 @@ namespace WindowsFormsApp1
         {
             if(textBox1.Text != "" && textBox1.Text != "")
             {
+
                 Class1 clase = new Class1();
+
+
                 clase.a = textBox1.Text;
+                MessageBox.Show(clase.a);
                 login1();
             }
             else
@@ -73,6 +76,8 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             this.Hide();
             crearusu cu = new crearusu();
             cu.Show();
