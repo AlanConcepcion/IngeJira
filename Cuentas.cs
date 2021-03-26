@@ -17,6 +17,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            MessageBox.Show("click okay and the Form will appear");
+        }
 
         private void zaza_Click(object sender, EventArgs e)
         {

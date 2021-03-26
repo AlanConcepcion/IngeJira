@@ -60,6 +60,8 @@ namespace WindowsFormsApp1
         {
             if(textBox1.Text != "" && textBox1.Text != "")
             {
+                Class1 clase = new Class1();
+                clase.a = textBox1.Text;
                 login1();
             }
             else
