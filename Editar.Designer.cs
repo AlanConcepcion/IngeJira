@@ -150,54 +150,55 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(135, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(127, 20);
             this.textBox1.TabIndex = 44;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(135, 59);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(127, 20);
             this.textBox2.TabIndex = 45;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(135, 88);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(127, 20);
             this.textBox3.TabIndex = 46;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(135, 114);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(127, 20);
             this.textBox4.TabIndex = 47;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(135, 143);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(127, 20);
             this.textBox5.TabIndex = 48;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(135, 172);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(127, 20);
             this.textBox6.TabIndex = 49;
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(198, 219);
+            this.button1.Location = new System.Drawing.Point(209, 221);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 50;
-            this.button1.Text = "Confirmar";
+            this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
