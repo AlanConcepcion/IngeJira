@@ -36,13 +36,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // zaza
@@ -121,42 +121,6 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Edad:";
             // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.editar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(407, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 34);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Editar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(12, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 44);
-            this.button1.TabIndex = 27;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.usuario;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(193, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(93, 90);
-            this.panel1.TabIndex = 20;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -189,10 +153,50 @@
             this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 33;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.editar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(407, 415);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 34);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Editar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(12, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 44);
+            this.button1.TabIndex = 27;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.usuario;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(193, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(93, 90);
+            this.panel1.TabIndex = 20;
+            // 
             // Cuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(509, 466);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -208,6 +212,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.zaza);
             this.Controls.Add(this.label7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Cuentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cuenta";

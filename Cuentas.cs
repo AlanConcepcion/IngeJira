@@ -73,5 +73,14 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+             Editar ed = new Editar();
+            Hide();
+          ed.Show();
+            
     }
+}
 }
