@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,43 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+
+        Class1 clase = new Class1();
+        public void solicitar()
+        {
+
+            try
+            {
+
+                string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(cn))
+                {
+
+                    conexion.Open();
+
+                    SqlCommand cmd = new SqlCommand("insert into usuario (cantidad, fecha, fecha_lim, persona_id) values (" + textBox1.Text + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a, conexion);
+                    int query = cmd.ExecuteNonQuery();
+
+                    if (query != 0)
+                    {
+                        MessageBox.Show("Se Envio la solicitud.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, revise los campos.");
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void Form4_Load(object sender, EventArgs e)
         {
 
@@ -24,7 +63,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(textBox1.Text != "") MessageBox.Show("Solicitud enviada.");
+            else MessageBox.Show("Llene los campos.");
         }
 
         private void button2_Click(object sender, EventArgs e)

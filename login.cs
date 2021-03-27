@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
 
 
                 clase.a = textBox1.Text;
-                MessageBox.Show(clase.a);
+                
                 login1();
             }
             else
