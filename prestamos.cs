@@ -35,7 +35,15 @@ namespace WindowsFormsApp1
 
                     conexion.Open();
 
-                    SqlCommand cmd = new SqlCommand("insert into usuario (cantidad, fecha, fecha_lim, persona_id) values (" + textBox1.Text + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a, conexion);
+                    int cantidad = Convert.ToInt32(textBox1.Text);
+                    double interes = 0.05;
+
+                    double aplicado = cantidad * interes;
+
+                    int total = Convert.ToInt32(aplicado) + cantidad;
+
+
+                    SqlCommand cmd = new SqlCommand("insert into prestamos(cantidad, fecha, fecha_lim, persona_id) values (" + total + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a + ")", conexion);
                     int query = cmd.ExecuteNonQuery();
 
                     if (query != 0)
@@ -63,7 +71,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text != "") MessageBox.Show("Solicitud enviada.");
+            if (textBox1.Text != "")
+                solicitar();   
             else MessageBox.Show("Llene los campos.");
         }
 
