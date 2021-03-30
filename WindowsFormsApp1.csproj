@@ -140,6 +140,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarjeta.Designer.cs">
+      <DependentUpon>tarjeta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cuentas.resx">
       <DependentUpon>Cuentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +183,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="tarjeta.resx">
+      <DependentUpon>tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,6 +263,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vsmc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58482363cef1014c0b5e49c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

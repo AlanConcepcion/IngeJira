@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
 
         Class1 clase = new Class1();
 
+        public string cantidad;
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -67,7 +68,44 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
 
+            using (SqlConnection conexion = new SqlConnection(cn))
+            {
+
+                if (dataGridView1.SelectedRows.Count != 1)
+                {
+                    conexion.Open();
+
+                SqlCommand con = new SqlCommand("insert into historial(de, id_persona) values ('Realizo el pago de: "+cantidad+ "$ el dia "+ dateTimePicker1.Value.ToString() + "', " + Convert.ToInt32(clase.a)+ ")", conexion);
+
+                    int query = con.ExecuteNonQuery();
+
+                    if (query != 0)
+                    {
+                        MessageBox.Show("Se realizo el pago correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+
+
+                } else
+                {
+                    MessageBox.Show("Seleccione una fila.");
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+
+                cantidad = dataGridView1.Rows[e.RowIndex].Cells["cantidad"].FormattedValue.ToString();
+            }
         }
     }
-}
+} 

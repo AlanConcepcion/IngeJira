@@ -261,6 +261,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MaximumSize = new System.Drawing.Size(511, 501);
+            this.MinimumSize = new System.Drawing.Size(511, 501);
             this.Name = "crearusu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear usuario";

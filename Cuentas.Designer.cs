@@ -214,7 +214,9 @@
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(525, 505);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(525, 505);
             this.Name = "Cuentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cuenta";

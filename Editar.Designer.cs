@@ -238,7 +238,9 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(296, 256);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(296, 256);
             this.Name = "Editar";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

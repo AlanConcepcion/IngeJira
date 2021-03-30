@@ -248,6 +248,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 476);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(587, 515);
+            this.MinimumSize = new System.Drawing.Size(587, 515);
             this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

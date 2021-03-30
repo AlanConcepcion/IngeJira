@@ -140,6 +140,8 @@
             this.ClientSize = new System.Drawing.Size(390, 210);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(406, 249);
+            this.MinimumSize = new System.Drawing.Size(406, 249);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

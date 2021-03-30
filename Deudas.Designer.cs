@@ -99,6 +99,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.zaza);
             this.Controls.Add(this.label7);
+            this.MaximumSize = new System.Drawing.Size(579, 358);
+            this.MinimumSize = new System.Drawing.Size(579, 358);
             this.Name = "Deudas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deudas";

@@ -144,6 +144,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.zaza);
             this.Controls.Add(this.label7);
+            this.MaximumSize = new System.Drawing.Size(597, 438);
+            this.MinimumSize = new System.Drawing.Size(597, 438);
             this.Name = "prestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prestamos";
