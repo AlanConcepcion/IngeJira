@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
 
                     conexion.Open();
 
-                    SqlCommand con = new SqlCommand("select * from prestamos where persona_id= " + Convert.ToInt32(clase.a), conexion);
+                    SqlCommand con = new SqlCommand("select * from prestamos where persona_id= " + Convert.ToInt32(clase.a) +" and estado = 0", conexion);
 
                     SqlDataReader r = con.ExecuteReader();
 
@@ -106,6 +106,16 @@ namespace WindowsFormsApp1
 
                 cantidad = dataGridView1.Rows[e.RowIndex].Cells["cantidad"].FormattedValue.ToString();
             }
+        }
+
+        private void Pagos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 } 

@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                     int total = Convert.ToInt32(aplicado) + cantidad;
 
 
-                    SqlCommand cmd = new SqlCommand("insert into prestamos(cantidad, fecha, fecha_lim, persona_id) values (" + total + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a + ")", conexion);
+                    SqlCommand cmd = new SqlCommand("insert into prestamos(cantidad, fecha, fecha_lim, persona_id, estado) values (" + total + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a + ", 0)", conexion);
                     int query = cmd.ExecuteNonQuery();
 
                     if (query != 0)
