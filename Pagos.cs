@@ -22,6 +22,8 @@ namespace WindowsFormsApp1
         Class1 clase = new Class1();
 
         public string cantidad;
+        public int prestamoid;
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -78,10 +80,11 @@ namespace WindowsFormsApp1
                     conexion.Open();
 
                 SqlCommand con = new SqlCommand("insert into historial(de, id_persona) values ('Realizo el pago de: "+cantidad+ "$ el dia "+ dateTimePicker1.Value.ToString() + "', " + Convert.ToInt32(clase.a)+ ")", conexion);
-
+                    SqlCommand delete = new SqlCommand("delete prestamos where persona_id =" + Convert.ToInt32(clase.a) + "and id_prestamo = " + prestamoid, conexion);
                     int query = con.ExecuteNonQuery();
+                    int query2 = delete.ExecuteNonQuery();
 
-                    if (query != 0)
+                    if (query != 0 || query2 != 0)
                     {
                         MessageBox.Show("Se realizo el pago correctamente.");
                     }
@@ -105,6 +108,7 @@ namespace WindowsFormsApp1
                 dataGridView1.CurrentRow.Selected = true;
 
                 cantidad = dataGridView1.Rows[e.RowIndex].Cells["cantidad"].FormattedValue.ToString();
+                prestamoid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_prestamo"].FormattedValue.ToString());
             }
         }
 
