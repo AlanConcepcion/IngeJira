@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
 
                     conexion.Open();
 
-                    SqlCommand con = new SqlCommand("select nombre, apellido, telefono, correo, direccion, edad from usuario where id= " + Convert.ToInt32(clase.a), conexion);
+                    SqlCommand con = new SqlCommand("select nombre, apellido, telefono, correo, direccion, edad, contrasena from usuario where id= " + Convert.ToInt32(clase.a), conexion);
 
                     SqlDataReader r = con.ExecuteReader();
 
@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                         textBox4.Text = Convert.ToString(r.GetValue(3));
                         textBox5.Text = Convert.ToString(r.GetValue(4));
                         textBox6.Text = Convert.ToString(r.GetValue(5));
+                        textBox7.Text = Convert.ToString(r.GetValue(6));
                     }
                 }
             }
@@ -87,10 +88,10 @@ namespace WindowsFormsApp1
 
                     conexion.Open();
 
-                    SqlCommand con = new SqlCommand("update usuario set nombre = '" + textBox1.Text + "', apellido ='" + textBox2.Text + "', telefono =" + textBox3.Text + ", correo ='" + textBox4.Text + "', direccion = '" + textBox5.Text + "', edad = " + textBox6.Text + " where ID = " + clase.a, conexion);
+                    SqlCommand con = new SqlCommand("update usuario set nombre = '" + textBox1.Text + "', apellido ='" + textBox2.Text + "', telefono =" + textBox3.Text + ", correo ='" + textBox4.Text + "', direccion = '" + textBox5.Text + "', edad = " + textBox6.Text + " , contrasena = '"+ textBox7.Text + "' where ID = " + clase.a, conexion);
 
                     int guardar = con.ExecuteNonQuery();
-                    if(textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "")
+                    if(textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "")
                     {
                         if (guardar == 1) MessageBox.Show("Se Modifico correctamente.");
 
