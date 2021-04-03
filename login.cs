@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        
         public void login1()
         {
             
@@ -81,6 +82,11 @@ namespace WindowsFormsApp1
             this.Hide();
             crearusu cu = new crearusu();
             cu.Show();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
