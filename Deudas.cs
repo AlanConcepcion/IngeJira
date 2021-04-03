@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
                 conexion.Open();
 
-                SqlCommand con = new SqlCommand("select * from prestamos where persona_id=  " + Convert.ToInt32(clase.a) + "and fecha_lim <= GETDATE()", conexion);
+                SqlCommand con = new SqlCommand("select id_prestamo as IDP, persona_id as ID, cantidad as Cantidad, fecha as Fecha, fecha_lim as Limite from prestamos where persona_id=  " + Convert.ToInt32(clase.a) + "and fecha_lim <= GETDATE()", conexion);
 
                 SqlDataReader r = con.ExecuteReader();
 
@@ -113,8 +113,8 @@ namespace WindowsFormsApp1
             {
                 dataGridView1.CurrentRow.Selected = true;
 
-                cantidad = dataGridView1.Rows[e.RowIndex].Cells["cantidad"].FormattedValue.ToString();
-                prestamoid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id_prestamo"].FormattedValue.ToString());
+                cantidad = dataGridView1.Rows[e.RowIndex].Cells["Cantidad"].FormattedValue.ToString();
+                prestamoid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IDP"].FormattedValue.ToString());
             }
         }
     }
