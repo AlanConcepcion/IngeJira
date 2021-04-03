@@ -27,8 +27,14 @@ namespace WindowsFormsApp1
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
+            dataGridView1.Rows.Clear();
             dataGridView1.DataSource = lista();
+        }
+
+        void AutoHeightGrid(DataGridView grid)
+        {
+            var proposedSize = grid.GetPreferredSize(new Size(0, 0));
+            grid.Height = proposedSize.Height;
         }
 
         private DataTable lista()
@@ -114,7 +120,8 @@ namespace WindowsFormsApp1
 
         private void Pagos_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.RowsAdded += (obj, arg) => AutoHeightGrid(dataGridView1);
+            dataGridView1.RowsRemoved += (obj, arg) => AutoHeightGrid(dataGridView1);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
