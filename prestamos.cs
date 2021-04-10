@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                     int total = Convert.ToInt32(aplicado) + cantidad;
 
 
-                    SqlCommand cmd = new SqlCommand("insert into prestamos(cantidad, fecha, fecha_lim, persona_id, estado) values (" + total + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a + ", 0)", conexion);
+                    SqlCommand cmd = new SqlCommand("insert into prestamos(cantidad, fecha, fecha_lim, persona_id, estado) values (" + total + ",'" + Convert.ToString(dateTimePicker1.Value.ToString("yyyy-MM-dd")) + "','" + dateTimePicker1.Value.AddDays(30).ToString("yyyy-MM-dd") + "', " + clase.a + ", 2)", conexion);
                     int query = cmd.ExecuteNonQuery();
 
                     if (query != 0)
@@ -81,6 +81,11 @@ namespace WindowsFormsApp1
             this.Hide();
             menu me = new menu();
             me.Show();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

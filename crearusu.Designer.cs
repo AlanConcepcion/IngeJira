@@ -62,17 +62,19 @@
             // 
             // textBox1
             // 
+            this.textBox1.AcceptsTab = true;
             this.textBox1.Location = new System.Drawing.Point(183, 129);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
+            this.textBox2.AcceptsTab = true;
             this.textBox2.Location = new System.Drawing.Point(184, 166);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBox2.TabIndex = 3;
             // 
             // label3
             // 
@@ -86,10 +88,11 @@
             // 
             // textBox3
             // 
+            this.textBox3.AcceptsTab = true;
             this.textBox3.Location = new System.Drawing.Point(184, 92);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 1;
             // 
             // label4
             // 
@@ -97,16 +100,17 @@
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(101, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Cedula/Id";
+            this.label4.Text = "Cuenta/Id";
             // 
             // textBox4
             // 
+            this.textBox4.AcceptsTab = true;
             this.textBox4.Location = new System.Drawing.Point(184, 201);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(160, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBox4.TabIndex = 4;
             // 
             // label5
             // 
@@ -120,10 +124,11 @@
             // 
             // textBox5
             // 
+            this.textBox5.AcceptsTab = true;
             this.textBox5.Location = new System.Drawing.Point(184, 279);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(160, 20);
-            this.textBox5.TabIndex = 12;
+            this.textBox5.TabIndex = 6;
             // 
             // label6
             // 
@@ -145,10 +150,11 @@
             // 
             // textBox6
             // 
+            this.textBox6.AcceptsTab = true;
             this.textBox6.Location = new System.Drawing.Point(184, 239);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(160, 20);
-            this.textBox6.TabIndex = 15;
+            this.textBox6.TabIndex = 5;
             // 
             // label8
             // 
@@ -163,10 +169,11 @@
             // 
             // textBox7
             // 
+            this.textBox7.AcceptsTab = true;
             this.textBox7.Location = new System.Drawing.Point(184, 352);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(160, 20);
-            this.textBox7.TabIndex = 17;
+            this.textBox7.TabIndex = 8;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label9
@@ -200,7 +207,7 @@
             this.button1.Location = new System.Drawing.Point(408, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Crear";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -219,10 +226,11 @@
             // 
             // textBox8
             // 
+            this.textBox8.AcceptsTab = true;
             this.textBox8.Location = new System.Drawing.Point(184, 314);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(160, 20);
-            this.textBox8.TabIndex = 20;
+            this.textBox8.TabIndex = 7;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10

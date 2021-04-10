@@ -52,10 +52,46 @@ namespace WindowsFormsApp1
             catch (Exception e)
             {
 
-               MessageBox.Show("ID o contraseña incorrectos.");
+               MessageBox.Show(e.Message);
             }
         }
 
+        public void login2()
+        {
+
+            try
+            {
+
+                string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
+
+
+
+                using (SqlConnection conexion = new SqlConnection(cn))
+                {
+
+                    conexion.Open();
+
+                    SqlCommand cmd = new SqlCommand("select id, contrasena from administrador where id= " + textBox1.Text + " and contrasena= '" + textBox2.Text + "' ", conexion);
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        Hide();
+                        Form1 f = new Form1();
+                        f.Show();
+
+                    }
+                    conexion.Close();
+
+                }
+            }
+
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             if(textBox1.Text != "" && textBox1.Text != "")
@@ -63,14 +99,19 @@ namespace WindowsFormsApp1
 
                 Class1 clase = new Class1();
 
-
                 clase.a = textBox1.Text;
                 
                 login1();
-            }
-            else
+                login2();
+            } else 
             {
-                MessageBox.Show("Llene los campos.");
+                
+;                
+            }
+
+            if(textBox1.Text == "" && textBox1.Text == "")
+            {
+                MessageBox.Show("Los campos no pueden estar vacios.");
             }
 
         }
@@ -87,6 +128,11 @@ namespace WindowsFormsApp1
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Debe ir a una sucursal para la creación de su cuenta.");
         }
     }
 }

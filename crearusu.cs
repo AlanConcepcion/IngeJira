@@ -78,9 +78,11 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Close();
-            login lo = new login();
-            lo.Show();
+
+
+            Hide();
+            Form1 f = new Form1();
+            f.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
