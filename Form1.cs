@@ -133,37 +133,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
 
-                using (SqlConnection conexion = new SqlConnection(cn))
-                {
-
-
-                    conexion.Open();
-
-                    SqlCommand con = new SqlCommand("delete prestamos where id_prestamo =" + prestamoid, conexion);
-
-                    int mod = con.ExecuteNonQuery();
-
-
-                    if (mod == 1)
-                    {
-                        MessageBox.Show("Se Cancelo correctamente.");
-                        dataGridView1.DataSource = lista();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seleccione una fila.");
-                    }
-                }
-            }
-
-            catch (SqlException er)
-            {
-                MessageBox.Show(Convert.ToString(er));
-            }
         }
     }
 }

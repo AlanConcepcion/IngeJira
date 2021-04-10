@@ -59,7 +59,7 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(521, 328);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
@@ -114,7 +114,6 @@
             this.button4.TabIndex = 29;
             this.button4.Text = "Cancelar prestamo";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
