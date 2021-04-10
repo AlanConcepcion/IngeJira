@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
 
         Class1 clase = new Class1();
 
-        public string cantidad;
         public int prestamoid;
         protected override void OnLoad(EventArgs e)
         {
@@ -79,15 +78,48 @@ namespace WindowsFormsApp1
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dataGridView1.CurrentRow.Selected = true;
-
-                cantidad = dataGridView1.Rows[e.RowIndex].Cells["Cantidad"].FormattedValue.ToString();
                 prestamoid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IDP"].FormattedValue.ToString());
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // update prestamos set estado = 0 where id_prestamo = 0;
 
+            try
+            {
+                string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(cn))
+                {
+
+
+                    conexion.Open();
+
+                    SqlCommand con = new SqlCommand("update prestamos set estado = 0 where id_prestamo =" + prestamoid, conexion);
+
+                    int mod = con.ExecuteNonQuery();
+
+                    
+                        if (mod == 1)
+                    {
+                        MessageBox.Show("Se Valido correctamente.");
+
+                        dataGridView1.DataSource = lista();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una fila");
+                    }
+                }
+            }
+
+            catch (SqlException er)
+            {
+                MessageBox.Show(Convert.ToString(er));
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,6 +129,41 @@ namespace WindowsFormsApp1
             login l = new login();
             l.Show();
                 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cn = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.Valor"].ConnectionString;
+
+                using (SqlConnection conexion = new SqlConnection(cn))
+                {
+
+
+                    conexion.Open();
+
+                    SqlCommand con = new SqlCommand("delete prestamos where id_prestamo =" + prestamoid, conexion);
+
+                    int mod = con.ExecuteNonQuery();
+
+
+                    if (mod == 1)
+                    {
+                        MessageBox.Show("Se Cancelo correctamente.");
+                        dataGridView1.DataSource = lista();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una fila.");
+                    }
+                }
+            }
+
+            catch (SqlException er)
+            {
+                MessageBox.Show(Convert.ToString(er));
+            }
         }
     }
 }

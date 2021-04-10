@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
                     if (query != 0 || query2 != 0)
                     {
                         MessageBox.Show("Se realizo el pago correctamente.");
+                        dataGridView1.DataSource = lista();
                     }
                     else
                     {

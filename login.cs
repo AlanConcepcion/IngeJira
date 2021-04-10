@@ -134,5 +134,10 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Debe ir a una sucursal para la creación de su cuenta.");
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

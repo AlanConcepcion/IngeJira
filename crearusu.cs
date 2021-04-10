@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
 
                     if (query != 0)
                     {
-                        MessageBox.Show("Se agrego usuario correctamente.");
+                        MessageBox.Show("Se creo la cuenta correctamente.");
                     }
                     else
                     {
@@ -98,6 +98,16 @@ namespace WindowsFormsApp1
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }
