@@ -193,9 +193,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.left_arrow;
-            this.button2.Location = new System.Drawing.Point(12, 418);
+            this.button2.Location = new System.Drawing.Point(12, 409);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 32);
+            this.button2.Size = new System.Drawing.Size(26, 41);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
